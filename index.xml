@@ -18,23 +18,5 @@ root@kali:~/tryhackme/metamorphosis#nmap -sC -sV 10.10.97.133 Starting Nmap 7.91
 PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 f7:0f:0a:18:50:78:07:10:f2:32:d1:60:30:40:d4:be (RSA) | 256 5c:00:37:df:b2:ba:4c:f2:3c:46:6e:a3:e9:44:90:37 (ECDSA) |_ 256 fe:bf:53:f1:d0:5a:7c:30:db:ac:c8:3c:79:64:47:c8 (ED25519) 80/tcp open http Apache httpd 2.4.29 ((Ubuntu)) |_http-server-header: Apache/2.</description>
     </item>
     
-    <item>
-      <title>Create a Free Blog Site Using GitHub Pages and Hugo</title>
-      <link>http://hritik-saini.github.io/post/createafreeblogsite/</link>
-      <pubDate>Mon, 31 Aug 2020 13:09:42 -0600</pubDate>
-      
-      <guid>http://hritik-saini.github.io/post/createafreeblogsite/</guid>
-      <description>&lt;p&gt;Want to create your own blog, but don&amp;rsquo;t want to get tied into any of the big hosted solutions or subscription publishing sites? This article describes how to use GitHub Pages with Hugo to create, maintain, and host your own blog site.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Develop and Deploy Kubernetes Applications on a Raspberry Pi Cluster</title>
-      <link>http://hritik-saini.github.io/post/develop_and_deploy_kubernetes_applications_on_a_raspberry_pi_cluster/</link>
-      <pubDate>Wed, 26 Aug 2020 01:01:31 -0600</pubDate>
-      
-      <guid>http://hritik-saini.github.io/post/develop_and_deploy_kubernetes_applications_on_a_raspberry_pi_cluster/</guid>
-      <description>&lt;p&gt;Want to set up a Kubernetes lab, but don&amp;rsquo;t want use Minikube or spend a lot of money on hardware. This is the first post in a series that describes how to set up a complete Kubernetes cluster on a cluster of Raspberry Pis. This will include topics such as setting up a logging infrastructure, monitoring, Ingress, and other platform level capabilities.&lt;/p&gt;</description>
-    </item>
-    
   </channel>
 </rss>

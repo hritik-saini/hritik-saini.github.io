@@ -18,108 +18,11 @@
   </url>
   
   <url>
-    <loc>http://hritik-saini.github.io/tags/blog/</loc>
-    <lastmod>2020-08-31T13:09:42-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://hritik-saini.github.io/categories/blog/</loc>
-    <lastmod>2020-08-31T13:09:42-06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://hritik-saini.github.io/categories/</loc>
-    <lastmod>2020-08-31T13:09:42-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://hritik-saini.github.io/post/createafreeblogsite/</loc>
-    <lastmod>2020-08-31T13:09:42-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://hritik-saini.github.io/tags/github-pages/</loc>
-    <lastmod>2020-08-31T13:09:42-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://hritik-saini.github.io/tags/hugo/</loc>
-    <lastmod>2020-08-31T13:09:42-06:00</lastmod>
   </url>
   
   <url>
     <loc>http://hritik-saini.github.io/tags/</loc>
-    <lastmod>2020-08-31T13:09:42-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://hritik-saini.github.io/post/develop_and_deploy_kubernetes_applications_on_a_raspberry_pi_cluster/</loc>
-    <lastmod>2020-08-26T01:01:31-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://hritik-saini.github.io/tags/docker/</loc>
-    <lastmod>2020-08-26T01:01:31-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://hritik-saini.github.io/tags/elasticsearch/</loc>
-    <lastmod>2020-08-26T01:01:31-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://hritik-saini.github.io/tags/fluentd/</loc>
-    <lastmod>2020-08-26T01:01:31-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://hritik-saini.github.io/tags/grafana/</loc>
-    <lastmod>2020-08-26T01:01:31-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://hritik-saini.github.io/tags/helm/</loc>
-    <lastmod>2020-08-26T01:01:31-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://hritik-saini.github.io/tags/kubernetes/</loc>
-    <lastmod>2020-08-26T01:01:31-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://hritik-saini.github.io/categories/kubernetes/</loc>
-    <lastmod>2020-08-26T01:01:31-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://hritik-saini.github.io/tags/kubernetes-ingress/</loc>
-    <lastmod>2020-08-26T01:01:31-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://hritik-saini.github.io/tags/mysql/</loc>
-    <lastmod>2020-08-26T01:01:31-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://hritik-saini.github.io/tags/prometheus/</loc>
-    <lastmod>2020-08-26T01:01:31-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://hritik-saini.github.io/tags/raspberry-pi/</loc>
-    <lastmod>2020-08-26T01:01:31-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://hritik-saini.github.io/categories/raspberry-pi/</loc>
-    <lastmod>2020-08-26T01:01:31-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://hritik-saini.github.io/tags/traefik/</loc>
-    <lastmod>2020-08-26T01:01:31-06:00</lastmod>
   </url>
   
 </urlset>

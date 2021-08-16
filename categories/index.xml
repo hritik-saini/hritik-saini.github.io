@@ -5,34 +5,6 @@
     <link>http://hritik-saini.github.io/categories/</link>
     <description>Recent content in Categories on Hritik saini</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 31 Aug 2020 13:09:42 -0600</lastBuildDate><atom:link href="http://hritik-saini.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>blog</title>
-      <link>http://hritik-saini.github.io/categories/blog/</link>
-      <pubDate>Mon, 31 Aug 2020 13:09:42 -0600</pubDate>
-      
-      <guid>http://hritik-saini.github.io/categories/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kubernetes</title>
-      <link>http://hritik-saini.github.io/categories/kubernetes/</link>
-      <pubDate>Wed, 26 Aug 2020 01:01:31 -0600</pubDate>
-      
-      <guid>http://hritik-saini.github.io/categories/kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Raspberry Pi</title>
-      <link>http://hritik-saini.github.io/categories/raspberry-pi/</link>
-      <pubDate>Wed, 26 Aug 2020 01:01:31 -0600</pubDate>
-      
-      <guid>http://hritik-saini.github.io/categories/raspberry-pi/</guid>
-      <description></description>
-    </item>
-    
+    <language>en-us</language><atom:link href="http://hritik-saini.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
