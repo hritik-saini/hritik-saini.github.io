@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hritik saini</title>
+    <link>http://hritik-saini.github.io/</link>
+    <description>Recent content on Hritik saini</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Nov 2020 13:09:42 -0600</lastBuildDate><atom:link href="http://hritik-saini.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using a Weber Kettle to Cook a Great Smoked Brisket!</title>
+      <link>http://hritik-saini.github.io/post/smokedbrisket/</link>
+      <pubDate>Thu, 12 Nov 2020 13:09:42 -0600</pubDate>
+      
+      <guid>http://hritik-saini.github.io/post/smokedbrisket/</guid>
+      <description>&lt;p&gt;Want to cook a great smoked brisket but don&amp;rsquo;t want to invest in an expensive smoker or the 8 to 12 hours it takes to cook a brisket in a smoker? This article describes how to cook a great smoked brisket in 3 and 1/2 hours using a Weber Kettle and your oven.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Create Secure Clients and Servers in Golang Using HTTPS</title>
+      <link>http://hritik-saini.github.io/post/gohttpsclientserver/</link>
+      <pubDate>Sun, 20 Sep 2020 13:09:42 -0600</pubDate>
+      
+      <guid>http://hritik-saini.github.io/post/gohttpsclientserver/</guid>
+      <description>Overview The purpose of this article is to show how to write secure web services and clients using Go and HTTPS. In researching how to accomplish this I came across numerous articles and gists. However, none of them provided the complete picture I needed to implement a robust client or server. Most of them only provided terse code examples with equally terse examples regarding how to create the certificates needed for the code to work.</description>
+    </item>
+    
+    <item>
+      <title>Create a Free Blog Site Using GitHub Pages and Hugo</title>
+      <link>http://hritik-saini.github.io/post/createafreeblogsite/</link>
+      <pubDate>Mon, 31 Aug 2020 13:09:42 -0600</pubDate>
+      
+      <guid>http://hritik-saini.github.io/post/createafreeblogsite/</guid>
+      <description>&lt;p&gt;Want to create your own blog, but don&amp;rsquo;t want to get tied into any of the big hosted solutions or subscription publishing sites? This article describes how to use GitHub Pages with Hugo to create, maintain, and host your own blog site.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to Install MariaDB on a Raspberry Pi</title>
+      <link>http://hritik-saini.github.io/post/how-to-install-mariadb-an-a-raspberry-pi/</link>
+      <pubDate>Wed, 26 Aug 2020 13:07:25 -0600</pubDate>
+      
+      <guid>http://hritik-saini.github.io/post/how-to-install-mariadb-an-a-raspberry-pi/</guid>
+      <description>This article covers how to install and configure MariaDB, a feature-equivalent alternative to MySQL, on a Raspberry Pi. Installing is relatively straightforward. Configuring the database is somewhat more involved but still quite manageable.
+The full text of this article can be found on Medium  This is the sixth and final article in the Develop and Deploy Kubernetes Applications on a Raspberry Pi Cluster series. It marks the transition from a purely Raspberry Pi focus to software development more generally.</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes Application Monitoring on a Raspberry Pi Cluster</title>
+      <link>http://hritik-saini.github.io/post/kuberenetes-application-monitoring-on-a-reaspberry-pi-cluster/</link>
+      <pubDate>Wed, 26 Aug 2020 13:06:44 -0600</pubDate>
+      
+      <guid>http://hritik-saini.github.io/post/kuberenetes-application-monitoring-on-a-reaspberry-pi-cluster/</guid>
+      <description>Photo by Andres Dallimonti on Unsplash
+ The full text of this article can be found on Medium  This article is about monitoring applications deployed to a Kubernetes cluster running on Raspberry Pis, specifically the monitoring infrastructure.
+It’s important to note that while the focus of this article is the Raspberry Pi platform, much of what’s described, except for the ARM specific areas, is applicable to other hardware platforms.</description>
+    </item>
+    
+    <item>
+      <title>Install Kubernetes Ingress on a Raspberry Pi Cluster</title>
+      <link>http://hritik-saini.github.io/post/install-kuberenetes-ingress-on-a-raspberry-pi-cluster/</link>
+      <pubDate>Wed, 26 Aug 2020 13:05:37 -0600</pubDate>
+      
+      <guid>http://hritik-saini.github.io/post/install-kuberenetes-ingress-on-a-raspberry-pi-cluster/</guid>
+      <description>Photo by Tianshu Liu on Unsplash
+ The full text of this article can be found on Medium  This is the fourth article in the series described in Develop and Deploy Kubernetes Applications on a Raspberry Pi Cluster. The previous article described how to install Kubernetes on a Raspberry Pi cluster. This article is about Kubernetes Ingress. The next article, Kubernetes Application Monitoring on a Raspberry Pi Cluster, covers setting up Prometheus, Grafana, and a Elasticsearch, Fluentd, and Kibana (EFK) stack on the cluster.</description>
+    </item>
+    
+    <item>
+      <title>Install Kubernetes on a Raspberry Pi Cluster</title>
+      <link>http://hritik-saini.github.io/post/install-kubernetes-on-a-respberry-pi-cluster/</link>
+      <pubDate>Wed, 26 Aug 2020 13:04:50 -0600</pubDate>
+      
+      <guid>http://hritik-saini.github.io/post/install-kubernetes-on-a-respberry-pi-cluster/</guid>
+      <description>Photo by Flavio Gasperini on Unsplash
+ The full text of this article can be found on Medium  This is the third article in the series described in Develop and Deploy Kubernetes Applications on a Raspberry Pi Cluster. The previous article covered setting up a Raspberry Pi cluster. The next article is How to Install Kubernetes Ingress on a Raspberry Pi Cluster.
+This article is where the rubber meets the road, getting a fully operational, multi-node, Kubernetes cluster up and running on a Raspberry Pi cluster.</description>
+    </item>
+    
+    <item>
+      <title>How to Set Up a Raspberry Pi Cluster</title>
+      <link>http://hritik-saini.github.io/post/how_to_set_up_a_raspberry_pi_cluster/</link>
+      <pubDate>Wed, 26 Aug 2020 13:01:02 -0600</pubDate>
+      
+      <guid>http://hritik-saini.github.io/post/how_to_set_up_a_raspberry_pi_cluster/</guid>
+      <description>Photo by Jonathan on Unsplash
+ The full text of this article can be found on Medium.  This article covers what you need to know to setup your own Raspberry Pi cluster, including you what you need to buy, how to install the OS and configure the Raspberry Pis, how to set up networking, and other things you need to know to sinplify ongoing administration and maintenance of the cluster.</description>
+    </item>
+    
+    <item>
+      <title>Develop and Deploy Kubernetes Applications on a Raspberry Pi Cluster</title>
+      <link>http://hritik-saini.github.io/post/develop_and_deploy_kubernetes_applications_on_a_raspberry_pi_cluster/</link>
+      <pubDate>Wed, 26 Aug 2020 01:01:31 -0600</pubDate>
+      
+      <guid>http://hritik-saini.github.io/post/develop_and_deploy_kubernetes_applications_on_a_raspberry_pi_cluster/</guid>
+      <description>&lt;p&gt;Want to set up a Kubernetes lab, but don&amp;rsquo;t want use Minikube or spend a lot of money on hardware. This is the first post in a series that describes how to set up a complete Kubernetes cluster on a cluster of Raspberry Pis. This will include topics such as setting up a logging infrastructure, monitoring, Ingress, and other platform level capabilities.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
