@@ -6,17 +6,7 @@
     <description>Recent content in MySQL on Hritik saini</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Aug 2020 13:07:25 -0600</lastBuildDate><atom:link href="http://hritik-saini.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>How to Install MariaDB on a Raspberry Pi</title>
-      <link>http://hritik-saini.github.io/post/how-to-install-mariadb-an-a-raspberry-pi/</link>
-      <pubDate>Wed, 26 Aug 2020 13:07:25 -0600</pubDate>
-      
-      <guid>http://hritik-saini.github.io/post/how-to-install-mariadb-an-a-raspberry-pi/</guid>
-      <description>This article covers how to install and configure MariaDB, a feature-equivalent alternative to MySQL, on a Raspberry Pi. Installing is relatively straightforward. Configuring the database is somewhat more involved but still quite manageable.
-The full text of this article can be found on Medium  This is the sixth and final article in the Develop and Deploy Kubernetes Applications on a Raspberry Pi Cluster series. It marks the transition from a purely Raspberry Pi focus to software development more generally.</description>
-    </item>
-    
+    <lastBuildDate>Wed, 26 Aug 2020 01:01:31 -0600</lastBuildDate><atom:link href="http://hritik-saini.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Develop and Deploy Kubernetes Applications on a Raspberry Pi Cluster</title>
       <link>http://hritik-saini.github.io/post/develop_and_deploy_kubernetes_applications_on_a_raspberry_pi_cluster/</link>

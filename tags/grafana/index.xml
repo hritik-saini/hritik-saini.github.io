@@ -6,18 +6,7 @@
     <description>Recent content in Grafana on Hritik saini</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Aug 2020 13:06:44 -0600</lastBuildDate><atom:link href="http://hritik-saini.github.io/tags/grafana/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Kubernetes Application Monitoring on a Raspberry Pi Cluster</title>
-      <link>http://hritik-saini.github.io/post/kuberenetes-application-monitoring-on-a-reaspberry-pi-cluster/</link>
-      <pubDate>Wed, 26 Aug 2020 13:06:44 -0600</pubDate>
-      
-      <guid>http://hritik-saini.github.io/post/kuberenetes-application-monitoring-on-a-reaspberry-pi-cluster/</guid>
-      <description>Photo by Andres Dallimonti on Unsplash
- The full text of this article can be found on Medium  This article is about monitoring applications deployed to a Kubernetes cluster running on Raspberry Pis, specifically the monitoring infrastructure.
-It’s important to note that while the focus of this article is the Raspberry Pi platform, much of what’s described, except for the ARM specific areas, is applicable to other hardware platforms.</description>
-    </item>
-    
+    <lastBuildDate>Wed, 26 Aug 2020 01:01:31 -0600</lastBuildDate><atom:link href="http://hritik-saini.github.io/tags/grafana/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Develop and Deploy Kubernetes Applications on a Raspberry Pi Cluster</title>
       <link>http://hritik-saini.github.io/post/develop_and_deploy_kubernetes_applications_on_a_raspberry_pi_cluster/</link>

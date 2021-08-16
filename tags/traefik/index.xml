@@ -6,17 +6,7 @@
     <description>Recent content in Traefik on Hritik saini</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Aug 2020 13:05:37 -0600</lastBuildDate><atom:link href="http://hritik-saini.github.io/tags/traefik/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Install Kubernetes Ingress on a Raspberry Pi Cluster</title>
-      <link>http://hritik-saini.github.io/post/install-kuberenetes-ingress-on-a-raspberry-pi-cluster/</link>
-      <pubDate>Wed, 26 Aug 2020 13:05:37 -0600</pubDate>
-      
-      <guid>http://hritik-saini.github.io/post/install-kuberenetes-ingress-on-a-raspberry-pi-cluster/</guid>
-      <description>Photo by Tianshu Liu on Unsplash
- The full text of this article can be found on Medium  This is the fourth article in the series described in Develop and Deploy Kubernetes Applications on a Raspberry Pi Cluster. The previous article described how to install Kubernetes on a Raspberry Pi cluster. This article is about Kubernetes Ingress. The next article, Kubernetes Application Monitoring on a Raspberry Pi Cluster, covers setting up Prometheus, Grafana, and a Elasticsearch, Fluentd, and Kibana (EFK) stack on the cluster.</description>
-    </item>
-    
+    <lastBuildDate>Wed, 26 Aug 2020 01:01:31 -0600</lastBuildDate><atom:link href="http://hritik-saini.github.io/tags/traefik/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Develop and Deploy Kubernetes Applications on a Raspberry Pi Cluster</title>
       <link>http://hritik-saini.github.io/post/develop_and_deploy_kubernetes_applications_on_a_raspberry_pi_cluster/</link>
