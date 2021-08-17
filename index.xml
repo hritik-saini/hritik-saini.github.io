@@ -6,7 +6,16 @@
     <description>Recent content on Hritik saini</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Aug 2021 15:55:27 +0530</lastBuildDate><atom:link href="http://hritik-saini.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 Aug 2021 12:03:26 +0530</lastBuildDate><atom:link href="http://hritik-saini.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://hritik-saini.github.io/top/about/</link>
+      <pubDate>Tue, 17 Aug 2021 12:03:26 +0530</pubDate>
+      
+      <guid>http://hritik-saini.github.io/top/about/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Tryhackme Metamorphosis</title>
       <link>http://hritik-saini.github.io/post/tryhackme-metamorphosis/</link>
